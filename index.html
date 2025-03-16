@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>网址导航主页</title>
+      <link href="static/style-min.css" rel="stylesheet" type="text/css">
+      <style>
+            /* 隐藏单选框 */
+            input[type="radio"] {
+                  display: none;
+            }
+
+            /* 内容区域样式 */
+            .tab-content {
+                  padding: 0px;
+            }
+
+            .tab {
+                  display: none;
+            }
+
+            /* 显示选中的内容 */
+            #tab1:checked~.tab-content .tab1,
+            #tab2:checked~.tab-content .tab2,
+            #tab3:checked~.tab-content .tab3,
+            #tab4:checked~.tab-content .tab4,
+            #tab5:checked~.tab-content .tab5,
+            #tab6:checked~.tab-content .tab6 {
+                  display: block;
+            }
+      </style>
+</head>
+
+<body class="body" style="overflow-y: scroll;background-image: url(&quot;static/img/background.jpg&quot;);">
+      <div class="container">
+            <!-- 搜索框部分 -->
+            <div class="search-engine">
+                  <div class="search-box">
+                        <form class="search-from" action="https://www.baidu.com/s" method="get" target="_blank"
+                              _lpchecked="1">
+                              <span class="search-input-box">
+                                    <input tabindex="1" type="text" name="wd" class="search-input" placeholder="百度搜索">
+                              </span>
+                              <span class="search-button-box">
+                                    <input type="submit" class="search-button" value="">
+                              </span>
+                        </form>
+                  </div>
+                  <div class="search-box">
+                        <form class="search-from" action="https://www.google.com/search" method="GET" target="_blank"
+                              _lpchecked="1">
+                              <span class="search-input-box">
+                                    <input tabindex="1" type="text" name="q" class="search-input" placeholder="谷歌搜索">
+                              </span>
+                              <span class="search-button-box">
+                                    <input type="submit" class="search-button" value="">
+                              </span>
+                        </form>
+                  </div>
+            </div>
+            <div class="web-site" style="top: 0;">
+                  <!-- 导航标签 -->
+                  <div class="web-site-header">
+                        <div class="web-site-header-body">
+                              <div class="site-class-group">
+                                    <div class="left-btn" style="visibility: collapse;">
+                                          <span></span>
+                                    </div>
+                                    <div class="navi-btn-group site-class-group-body">
+                                          <div class="navi-btn-item site-class-item navi-btn-item-start "><span><label
+                                                            for="tab1">常用</label></span>
+                                          </div>
+                                          <div class="navi-btn-item site-class-item navi-btn-item-middle">
+                                                <span><label for="tab2">金融</label></span>
+                                          </div>
+                                          <div class="navi-btn-item site-class-item navi-btn-item-middle">
+                                                <span><label for="tab3">政务</label></span>
+                                          </div>
+                                          <div class="navi-btn-item site-class-item navi-btn-item-middle">
+                                                <span><label for="tab4">资源</label></span>
+                                          </div>
+                                          <div class="navi-btn-item site-class-item navi-btn-item-middle">
+                                                <span><label for="tab5">科技</label></span>
+                                          </div>
+                                          <div class="navi-btn-item site-class-item navi-btn-item-end">
+                                                <span><label for="tab6">其他</label></span>
+                                          </div>
+                                    </div>
+                                    <div class="right-btn" style="visibility: collapse;">
+                                          <span></span>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+
+                  <div class="tabs">
+                        <!-- 单选框 -->
+                        <input type="radio" name="tabs" id="tab1" checked>
+                        <input type="radio" name="tabs" id="tab2">
+                        <input type="radio" name="tabs" id="tab3">
+                        <input type="radio" name="tabs" id="tab4">
+                        <input type="radio" name="tabs" id="tab5">
+                        <input type="radio" name="tabs" id="tab6">
+                        <!-- 内容区域 -->
+
+                        <div class="tab-content">
+                              <div class="tab tab1">
+                                    <!-- 综合类 -->
+                                    <table class="web-site-table">
+                                          <tr>
+                                                <th>日常</th>
+                                                <td><a href="http://weibo.com/" target="_blank"><span class="icon"
+                                                                  style="background-image: url('static/site/weibo.ico');"></span>微博</a>
+                                                </td>
+                                                <td><a href="https://www.jd.com/" target="_blank"><span class="icon"
+                                                                  style="background-image: url('static/site/jd.ico');"></span>京东</a>
+                                                </td>
+                                                <td><a href="https://www.taobao.com/" target="_blank"><span class="icon"
+                                                                  style="background-image: url('static/site/taobao.ico');"></span>淘宝</a>
+                                                </td>
+                                                <td><a href="https://www.deepseek.com/" target="_blank"><span
+                                                                  class="icon"
+                                                                  style="background-image: url('static/site/deepseek.ico');"></span>DeepSeek</a>
+                                                </td>
+                                                <td><a href="https://xinghuo.xfyun.cn/" target="_blank"><span
+                                                                  class="icon"
+                                                                  style="background-image: url('static/site/xfxh.ico');"></span>讯飞星火</a>
+                                                </td>
+                                                <td><a href="" target="_blank">虚位以待</a></td>
+                                          </tr>
+                                          <tr>
+                                                <th>新闻</th>
+                                                <td><a href="http://www.toutiao.com/" target="_blank"><span class="icon"
+                                                                  style="background-image: url('static/site/toutiao.ico');"></span>今日头条</a>
+                                                </td>
+                                                <td><a href="http://news.ifeng.com/" target="_blank"><span class="icon"
+                                                                  style="background-image: url('static/site/ifeng.ico');"></span>凤凰新闻</a>
+                                                </td>
+                                                <td><a href="http://news.163.com/" target="_blank"><span class="icon"
+                                                                  style="background-image: url('static/site/163.ico');"></span>网易新闻</a>
+                                                </td>
+                                                <td><a href="http://news.qq.com/" target="_blank"><span class="icon"
+                                                                  style="background-image: url('static/site/qq.ico');"></span>腾讯新闻</a>
+                                                </td>
+                                                <td><a href="https://news.sina.com.cn/" target="_blank"><span
+                                                                  class="icon"
+                                                                  style="background-image: url('static/site/sina.ico');"></span>新浪新闻</a>
+                                                </td>
+                                                <td><a href="" target="_blank">虚位以待</a></td>
+                                          </tr>
+                                          <tr>
+                                                <th>影音</th>
+                                                <td><a href="https://www.bilibili.com/" target="_blank"><span
+                                                                  class="icon"
+                                                                  style="background-image: url('static/site/bilibili.ico');"></span>bilibili</a>
+                                                </td>
+                                                <td><a href="http://www.youku.com/" target="_blank"><span class="icon"
+                                                                  style="background-image: url('static/site/youku.ico');"></span>优酷</a>
+                                                </td>
+                                                <td><a href="http://www.iqiyi.com/" target="_blank"><span class="icon"
+                                                                  style="background-image: url('static/site/iqiyi.ico');"></span>爱奇艺</a>
+                                                </td>
+                                                <td><a href="https://v.qq.com/" target="_blank"><span class="icon"
+                                                                  style="background-image: url('static/site/txsp.ico');"></span>腾讯视频</a>
+                                                </td>
+                                                <td><a href="http://tv.sohu.com/" target="_blank"><span class="icon"
+                                                                  style="background-image: url('static/site/sohu.ico');"></span>搜狐视频</a>
+                                                </td>
+                                                <td><a href="http://music.163.com/" target="_blank"><span class="icon"
+                                                                  style="background-image: url('static/site/163.ico');"></span>网易音乐</a>
+                                                </td>
+                                          </tr>
+                                          <tr>
+                                                <th>邮箱</th>
+                                                <td><a href="http://mail.163.com/" target="_blank"><span class="icon"
+                                                                  style="background-image: url('static/site/163.ico');"></span>163邮箱</a>
+                                                </td>
+                                                <td><a href="http://mail.126.com/" target="_blank"><span class="icon"
+                                                                  style="background-image: url('static/site/163.ico');"></span>126邮箱</a>
+                                                </td>
+                                                <td><a href="https://mail.qq.com/" target="_blank"><span class="icon"
+                                                                  style="background-image: url('static/site/qq.ico');"></span>QQ邮箱</a>
+                                                </td>
+                                                <td><a href="http://mail.sina.com.cn/" target="_blank"><span
+                                                                  class="icon"
+                                                                  style="background-image: url('static/site/sina.ico');"></span>新浪邮箱</a>
+                                                </td>
+                                                <td><a href="http://mail.sohu.com/" target="_blank"><span class="icon"
+                                                                  style="background-image: url('static/site/sohumail.ico');"></span>搜狐邮箱</a>
+                                                </td>
+                                                <td><a href="" target="_blank">虚位以待</a></td>
+                                          </tr>
+                                          <tr>
+                                                <th>社区</th>
+                                                <td><a href="https://www.douban.com/" target="_blank"><span class="icon"
+                                                                  style="background-image: url('static/site/douban.ico');"></span>豆瓣</a>
+                                                </td>
+                                                <td><a href="https://www.zhihu.com/" target="_blank"><span class="icon"
+                                                                  style="background-image: url('static/site/zhihu.ico');"></span>知乎</a>
+                                                </td>
+                                                <td><a href="https://tieba.baidu.com/f?kw=%D1%EB%D0%D0&fr=ala0&tpl=5&dyTabStr=MCw2LDEsNCwzLDUsMiw4LDcsOQ%3D%3D"
+                                                            target="_blank"><span class="icon"
+                                                                  style="background-image: url('static/site/tieba.ico');"></span>央行吧</a>
+                                                </td>
+                                                <td><a href="" target="_blank">虚位以待</a></td>
+                                                <td><a href="" target="_blank">虚位以待</a></td>
+                                                <td><a href="" target="_blank">虚位以待</a></td>
+                                          </tr>
+                                          <tr>
+                                                <th>办公</th>
+                                                <td><a href="http://dict.youdao.com/" target="_blank"><span class="icon"
+                                                                  style="background-image: url('static/site/youdao.ico');"></span>有道词典</a>
+                                                </td>
+                                                <td><a href="https://fanyi.baidu.com/mtpe-individual/multimodal"
+                                                            target="_blank"><span class="icon"
+                                                                  style="background-image: url('static/site/bdfy.ico');"></span>百度翻译</a>
+                                                </td>
+                                                <td><a href="http://translate.google.cn/" target="_blank">谷歌翻译</a></td>
+                                                <td><a href="http://note.youdao.com/" target="_blank"><span class="icon"
+                                                                  style="background-image: url('static/site/yunbj.ico');"></span>有道云笔记</a>
+                                                </td>
+                                                <td><a href="https://www.yinxiang.com/" target="_blank"><span
+                                                                  class="icon"
+                                                                  style="background-image: url('static/site/yxbj.ico');"></span>印象笔记</a>
+                                                </td>
+                                                <td><a href="" target="_blank">虚位以待</a></td>
+                                          </tr>
+                                          <tr>
+                                                <th>学习</th>
+                                                <td><a href="http://open.163.com/" target="_blank"><span class="icon"
+                                                                  style="background-image: url('static/site/163.ico');"></span>网易公开课</a>
+                                                </td>
+                                                <td><a href="http://study.163.com/" target="_blank"><span class="icon"
+                                                                  style="background-image: url('static/site/yunkt.ico');"></span>网易云课堂</a>
+                                                </td>
+                                                <td><a href="https://ke.qq.com/" target="_blank"><span class="icon"
+                                                                  style="background-image: url('static/site/txkt.ico');"></span>腾讯课堂</a>
+                                                </td>
+                                                <td><a href="http://www.jikexueyuan.com/" target="_blank"><span
+                                                                  class="icon"
+                                                                  style="background-image: url('static/site/jike.ico');"></span>极客学院</a>
+                                                </td>
+                                                <td><a href="http://www.chuanke.com/" target="_blank">传课</a></td>
+                                                <td><a href="" target="_blank">虚位以待</a></td>
+                                          </tr>
+                                    </table>
+                              </div>
+                              <div class="tab tab2">
+                                    <!-- 金融类 -->
+                                    <table class="web-site-table">
+                                          <tr>
+                                                <th>日常</th>
+                                                <td><a href="https://xueqiu.com/" target="_blank"><span class="icon"
+                                                                  style="background-image: url('static/site/xueqiu.ico');"></span>雪球</a>
+                                                </td>
+                                                <td><a href="https://www.jisilu.cn/" target="_blank"><span class="icon"
+                                                                  style="background-image: url('static/site/jisilu.ico');"></span>集思录</a>
+                                                </td>
+                                                <td><a href="https://data.eastmoney.com/xg/xg/?mkt=kzz"
+                                                            target="_blank"><span class="icon"
+                                                                  style="background-image: url('static/site/dfcf.ico');"></span>东财新股</a>
+                                                </td>
+                                                <td><a href="" target="_blank">虚位以待</a></td>
+                                                <td><a href="" target="_blank">虚位以待</a></td>
+                                                <td><a href="" target="_blank">虚位以待</a></td>
+                                          </tr>
+                                          <tr>
+                                                <th>研报</th>
+                                                <td><a href="http://www.anbound.com.cn/" target="_blank">安邦咨询</a></td>
+                                                <td><a href="https://www.vzkoo.com/" target="_blank"><span class="icon"
+                                                                  style="background-image: url('static/site/wlzk.ico');"></span>未来智库</a>
+                                                </td>
+                                                <td><a href="https://www.chinabaogao.com/" target="_blank"><span
+                                                                  class="icon"
+                                                                  style="background-image: url('static/site/gybg.ico');"></span>观研报告</a>
+                                                </td>
+                                                <td><a href="" target="_blank">虚位以待</a></td>
+                                                <td><a href="" target="_blank">虚位以待</a></td>
+                                                <td><a href="" target="_blank">虚位以待</a></td>
+                                          </tr>
+                                          <tr>
+                                                <th>博客</th>
+                                                <td><a href="https://blog.sina.com.cn/fengqiderizi"
+                                                            target="_blank"><span class="icon"
+                                                                  style="background-image: url('static/site/sina.ico');"></span>封起De日子</a>
+                                                </td>
+                                                <td><a href="" target="_blank">虚位以待</a></td>
+                                                <td><a href="" target="_blank">虚位以待</a></td>
+                                                <td><a href="" target="_blank">虚位以待</a></td>
+                                                <td><a href="" target="_blank">虚位以待</a></td>
+                                                <td><a href="" target="_blank">虚位以待</a></td>
+                                          </tr>
+                                          <tr>
+                                                <th>银行</th>
+                                                <td><a href="https://www.icbc.com.cn/icbc/" target="_blank"><span
+                                                                  class="icon"
+                                                                  style="background-image: url('static/site/icbc.ico');"></span>工行</a>
+                                                </td>
+                                                <td><a href="https://www.abchina.com/cn/" target="_blank"><span
+                                                                  class="icon"
+                                                                  style="background-image: url('static/site/abchina.ico');"></span>农行</a>
+                                                </td>
+                                                <td><a href="https://www.boc.cn/" target="_blank"><span class="icon"
+                                                                  style="background-image: url('static/site/boc.ico');"></span>中行</a>
+                                                </td>
+                                                <td><a href="https://www.ccb.com/cn/home/indexv3.html"
+                                                            target="_blank"><span class="icon"
+                                                                  style="background-image: url('static/site/ccb.ico');"></span>建行</a>
+                                                </td>
+                                                <td><a href="https://www.psbc.com/cn/" target="_blank"><span
+                                                                  class="icon"
+                                                                  style="background-image: url('static/site/psbc.ico');"></span>邮政</a>
+                                                </td>
+                                                <td><a href="https://www.gx966888.com/" target="_blank"><span
+                                                                  class="icon"
+                                                                  style="background-image: url('static/site/nongxin.png');"></span>农信</a>
+                                                </td>
+                                          </tr>
+                                          <tr>
+                                                <th>交易所</th>
+                                                <td><a href="https://www.szse.cn/" target="_blank"><span class="icon"
+                                                                  style="background-image: url('static/site/szse.ico');"></span>深交所</a>
+                                                </td>
+                                                <td><a href="https://www.sse.com.cn/" target="_blank"><span class="icon"
+                                                                  style="background-image: url('static/site/sse.ico');"></span>上交所</a>
+                                                </td>
+                                                <td><a href="https://www.bse.cn/" target="_blank"><span class="icon"
+                                                                  style="background-image: url('static/site/bse.ico');"></span>北交所</a>
+                                                </td>
+                                                <td><a href="https://www.shibor.org/shibor/" target="_blank">同业中心</a>
+                                                </td>
+                                                <td><a href="http://www.shcpe.com.cn/" target="_blank"><span
+                                                                  class="icon"
+                                                                  style="background-image: url('static/site/piaojs.png');"></span>票交所</a>
+                                                </td>
+                                                <td><a href="https://www.ccdc.com.cn/" target="_blank"><span
+                                                                  class="icon"
+                                                                  style="background-image: url('static/site/ccdc.png');"></span>中央结算</a>
+                                                </td>
+                                          </tr>
+                                          <tr>
+                                                <th>协会</th>
+                                                <td><a href="http://www.caam.org.cn/" target="_blank"><span class="icon"
+                                                                  style="background-image: url('static/site/qcxh.png');"></span>汽车工业协会</a>
+                                                </td>
+                                                <td><a href="http://www.cpcaauto.com/" target="_blank"><span
+                                                                  class="icon"
+                                                                  style="background-image: url('static/site/clh.png');"></span>乘联会</a>
+                                                </td>
+                                                <td><a href="http://www.chinasugar.org.cn/" target="_blank"><span
+                                                                  class="icon"
+                                                                  style="background-image: url('static/site/tyxh.png');"></span>糖业协会</a>
+                                                </td>
+                                                <td><a href="https://www.iamac.org.cn/" target="_blank"><span
+                                                                  class="icon"
+                                                                  style="background-image: url('static/site/bxzcxh.ico');"></span>保险资产协会</a>
+                                                </td>
+                                                <td><a href="" target="_blank">虚位以待</a></td>
+                                                <td><a href="" target="_blank">虚位以待</a></td>
+                                          </tr>
+                                          <tr>
+                                                <th>财经</th>
+                                                <td><a href="http://www.eastmoney.com/" target="_blank"><span
+                                                                  class="icon"
+                                                                  style="background-image: url('static/site/dfcf.ico');"></span>东方财富</a>
+                                                </td>
+                                                <td><a href="http://www.yicai.com/" target="_blank"><span class="icon"
+                                                                  style="background-image: url('static/site/yicai.ico');"></span>第一财经</a>
+                                                </td>
+                                                <td><a href="http://www.hexun.com/" target="_blank"><span class="icon"
+                                                                  style="background-image: url('static/site/hexun.ico');"></span>和讯</a>
+                                                </td>
+                                                <td><a href="http://guba.eastmoney.com/" target="_blank"><span
+                                                                  class="icon"
+                                                                  style="background-image: url('static/site/dfcf.ico');"></span>股吧</a>
+                                                </td>
+                                                <td><a href="http://finance.ifeng.com/" target="_blank"><span
+                                                                  class="icon"
+                                                                  style="background-image: url('static/site/ifeng.ico');"></span>凤凰财经</a>
+                                                </td>
+                                                <td><a href="" target="_blank">虚位以待</a></td>
+                                          </tr>
+                                    </table>
+                              </div>
+                              <div class="tab tab3">
+                                    <!--政务类 -->
+                                    <table class="web-site-table">
+                                          <tr>
+                                                <th>日常</th>
+                                                <td><a href="https://etax.guangxi.chinatax.gov.cn:8443/"
+                                                            target="_blank"><span class="icon"
+                                                                  style="background-image: url('static/site/shuiju.ico');"></span>税务局</a>
+                                                </td>
+                                                <td><a href="https://gx.gsxt.gov.cn/index.html" target="_blank"><span
+                                                                  class="icon"
+                                                                  style="background-image: url('static/site/qygs.png');"></span>企业公示</a>
+                                                </td>
+                                                <td><a href="https://ipcrs.pbccrc.org.cn/" target="_blank">征信中心</a></td>
+                                                <td><a href="" target="_blank">虚位以待</a></td>
+                                                <td><a href="" target="_blank">虚位以待</a></td>
+                                                <td><a href="" target="_blank">虚位以待</a></td>
+                                          </tr>
+                                    </table>
+                              </div>
+                              <div class="tab tab4">
+                                    <!--资源类 -->
+                                    <table class="web-site-table">
+                                          <tr>
+                                                <th>日常</th>
+                                                <td><a href="" target="_blank">虚位以待</a></td>
+                                                <td><a href="" target="_blank">虚位以待</a></td>
+                                                <td><a href="" target="_blank">虚位以待</a></td>
+                                                <td><a href="" target="_blank">虚位以待</a></td>
+                                                <td><a href="" target="_blank">虚位以待</a></td>
+                                                <td><a href="" target="_blank">虚位以待</a></td>
+                                          </tr>
+                                    </table>
+                              </div>
+                              <div class="tab tab5">
+                                    <!--科技类 -->
+                                    <table class="web-site-table">
+                                          <tr>
+                                                <th>日常</th>
+                                                <td><a href="" target="_blank">虚位以待</a></td>
+                                                <td><a href="" target="_blank">虚位以待</a></td>
+                                                <td><a href="" target="_blank">虚位以待</a></td>
+                                                <td><a href="" target="_blank">虚位以待</a></td>
+                                                <td><a href="" target="_blank">虚位以待</a></td>
+                                                <td><a href="" target="_blank">虚位以待</a></td>
+                                          </tr>
+                                    </table>
+                              </div>
+                              <div class="tab tab6">
+                                    <!--其他类 -->
+                                    <table class="web-site-table">
+                                          <tr>
+                                                <th>日常</th>
+                                                <td><a href="http://www.youtube.com/" target="_blank"><span class="icon"
+                                                                  style="background-image: url('static/site/youtube.ico');"></span>油管</a>
+                                                </td>
+                                                <td><a href="https://github.com/" target="_blank"><span class="icon"
+                                                                  style="background-image: url('static/site/github.ico');"></span>GitHub</a>
+                                                </td>
+                                                <td><a href="https://dash.cloudflare.com/login" target="_blank"><span
+                                                                  class="icon"
+                                                                  style="background-image: url('static/site/cf.ico');"></span>Cloudflare</a>
+                                                </td>
+                                                <td><a href="https://chatgpt.com/" target="_blank"><span class="icon"
+                                                                  style="background-image: url('static/site/chatgpt.ico');"></span>Chatgpt</a>
+                                                </td>
+                                                <td><a href="https://twitter.com/" target="_blank"><span class="icon"
+                                                                  style="background-image: url('static/site/x.ico');"></span>推特</a>
+                                                </td>
+                                                <td><a href="" target="_blank">虚位以待</a>
+                                                </td>
+                                          </tr>
+                                          <tr>
+                                                <th>社区</th>
+                                                <td><a href="https://en.wikipedia.org/" target="_blank"><span
+                                                                  class="icon"
+                                                                  style="background-image: url('static/site/wiki.ico');"></span>维基百科</a>
+                                                </td>
+                                                <td><a href="https://www.reddit.com/" target="_blank"><span class="icon"
+                                                                  style="background-image: url('static/site/reddit.ico');"></span>Reddit</a>
+                                                </td>
+                                                <td><a href="http://500px.com/" target="_blank"><span class="icon"
+                                                                  style="background-image: url('static/site/500px.ico');"></span>500PX</a>
+                                                </td>
+                                                <td><a href="" target="_blank">虚位以待</a></td>
+                                                <td><a href="" target="_blank">虚位以待</a></td>
+                                                <td><a href="" target="_blank">虚位以待</a></td>
+                                          </tr>
+                                          <tr>
+                                                <th>影音</th>
+                                                <td><a href="https://www.ted.com/" target="_blank"><span class="icon"
+                                                                  style="background-image: url('static/site/ted.ico');"></span>TED</a>
+                                                </td>
+                                                <td><a href="https://www.spotify.com/" target="_blank"><span
+                                                                  class="icon"
+                                                                  style="background-image: url('static/site/spotify.ico');"></span>Spotify</a>
+                                                </td>
+                                                <td><a href="http://www.imdb.com/" target="_blank"><span class="icon"
+                                                                  style="background-image: url('static/site/imdb.png');"></span>IMDb</a>
+                                                </td>
+                                                <td><a href="https://www.hulu.com/" target="_blank">Hulu</a></td>
+                                                <td><a href="https://www.rottentomatoes.com/" target="_blank">烂番茄</a>
+                                                </td>
+                                                <td><a href="http://vimeo.com/" target="_blank">Vimeo</a></td>
+                                          </tr>
+                                          <tr>
+                                                <th>邮箱</th>
+                                                <td><a href="https://www.gmail.com/" target="_blank"><span class="icon"
+                                                                  style="background-image: url('static/site/gmail.ico');"></span>Gmail</a>
+                                                </td>
+                                                <td><a href="https://account.proton.me/mail" target="_blank"><span
+                                                                  class="icon"
+                                                                  style="background-image: url('static/site/proton.ico');"></span>Proton</a>
+                                                </td>
+                                                <td><a href="https://outlook.live.com/" target="_blank"><span
+                                                                  class="icon"
+                                                                  style="background-image: url('static/site/outlook.ico');"></span>OutlookMail</a>
+                                                </td>
+
+                                                <td><a href="https://login.yahoo.com/" target="_blank"><span
+                                                                  class="icon"
+                                                                  style="background-image: url('static/site/yahoo.ico');"></span>YahooMail</a>
+                                                </td>
+                                                <td><a href="https://www.mail.com/" target="_blank"><span class="icon"
+                                                                  style="background-image: url('static/site/mail.ico');"></span>Mail</a>
+                                                </td>
+                                                <td><a href="https://www.zoho.com/mail" target="_blank"><span
+                                                                  class="icon"
+                                                                  style="background-image: url('static/site/zoho.ico');"></span>zohoMail</a>
+                                                </td>
+                                          </tr>
+                                          <tr>
+                                                <th>新闻</th>
+                                                <td><a href="http://www.bbc.com/news" target="_blank"><span class="icon"
+                                                                  style="background-image: url('static/site/bbc.ico');"></span>BBC</a>
+                                                </td>
+                                                <td><a href="http://www.cnn.com/" target="_blank"><span class="icon"
+                                                                  style="background-image: url('static/site/cnn.ico');"></span>CNN</a>
+                                                </td>
+                                                <td><a href="https://news.google.com/" target="_blank"><span
+                                                                  class="icon"
+                                                                  style="background-image: url('static/site/googlenews.png');"></span>谷歌新闻</a>
+                                                </td>
+                                                <td><a href="http://www.foxnews.com/" target="_blank"><span class="icon"
+                                                                  style="background-image: url('static/site/foxnews.ico');"></span>福克斯新闻</a>
+                                                </td>
+                                                <td><a href="https://www.yahoo.com/news" target="_blank"><span
+                                                                  class="icon"
+                                                                  style="background-image: url('static/site/yahoo.ico');"></span>雅虎新闻</a>
+                                                </td>
+                                                <td><a href="http://www.salon.com/category/news" target="_blank"><span
+                                                                  class="icon"
+                                                                  style="background-image: url('static/site/salon.ico');"></span>SalonNews</a>
+                                                </td>
+                                          </tr>
+                                          <tr>
+                                                <th>电商</th>
+                                                <td><a href="https://www.amazon.com/" target="_blank"><span class="icon"
+                                                                  style="background-image: url('static/site/amazon.ico');"></span>亚马逊</a>
+                                                </td>
+                                                <td><a href="http://www.ebay.com/" target="_blank"><span class="icon"
+                                                                  style="background-image: url('static/site/ebay.ico');"></span>Ebay</a>
+                                                </td>
+                                                <td><a href="https://www.newegg.com/" target="_blank"><span class="icon"
+                                                                  style="background-image: url('static/site/newegg.ico');"></span>NewEgg</a>
+                                                </td>
+                                                <td><a href="" target="_blank">虚位以待</a></td>
+                                                <td><a href="" target="_blank">虚位以待</a></td>
+                                                <td><a href="/" target="_blank">虚位以待</a></td>
+                                          </tr>
+                                          <tr>
+                                                <th>数码</th>
+                                                <td><a href="https://www.engadget.com/" target="_blank">瘾科技</a></td>
+                                                <td><a href="http://www.theverge.com/" target="_blank">TheVerge</a></td>
+                                                <td><a href="http://www.digitaltrends.com/"
+                                                            target="_blank">DigitalTrends</a></td>
+                                                <td><a href="https://www.cyanogenmod.org/" target="_blank">CM团队</a></td>
+                                                <td><a href="http://www.anandtech.com/" target="_blank">Anandtech</a>
+                                                </td>
+                                                <td><a href="https://www.notebookcheck.net/"
+                                                            target="_blank">NotebookCheck</a></td>
+                                          </tr>
+                                    </table>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </div>
+</body>
+
+</html>
